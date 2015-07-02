@@ -71,64 +71,12 @@
 									
 									<p>
 									<strong><a >Here is the code.</strong>
-									<p>MODEL:
-   <p>SETS:
-  	months/1..6/:P,W,O,H,F,S,I,B,WD,D;<p/>
-
-   ENDSETS</p>
-
-
-
-   min=@sum(months(t):!costo por producto;	pc*P(t)+</p>
-			!C trabajadores;			15*8*WD(t)*W(t)+</p>
-			!C sobretiempo;			oc*O(t)+</p>
-			!contratos;				hc*H(t)+</p>
-			!despidos;				fc*F(t)+</p>
-			!subcontratos;			sc*S(t)+</p>
-			!C inventario;			ic*I(t)+</p>
-			!Accumulated Backlog;		bc*B(t));</p>
-
-
-  !equilibrio de producción;</p>
-   @for(months(t)| t#GT#1:</p>
-   P(t)+I(t-1)+S(t)+B(t)-I(t)-B(t-1) = D(t););</p>
-  !primer mes;</p>
-   P(1)+I0+S(1)+B(1)-I(1)-B0 = D(1);</p>
-</p>
-  !Equilibrio de trabajadores;</p>
-  @for(months(t)| t#GT#1:</p>
-  W(t)-W(t-1)-H(t)+F(t) = 0;);</p>
-  !Trabajadores en el primer mes;</p>
-  W(1)-W0-H(1)+F(1)=0;</p>
-  </p>
- !@for(months(t):(W(t)*8*WD(t))/5=P(t));</p>
- !@for(months(t):O(t)<=W(t)*8*WD(t));</p>
-</p>
-  @for(months(t):</p>
-  !balance de horas hombre;</p>
-  5*P(t)-8*WD(t)*W(t)-O(t) < 0;);</p></p>
-  </p>
-  @for(months(t):</p>
-  I(t) > 0.25*D(t););</p>
-  </p>
-  !Accumulated Backlog;B(6) = 0;</p>
-  </p>
-  DATA:</p>
-  !demanda; 			D=1800,1500,1100,900,1100,1600;</p>
-  !dias de trabajo por mes;	WD=22,19,21,21,22,20;</p>
-  !coso de produccion;		pc=100;</p>
-  !costo por tiempo extra;	oc=20;</p>
-  !costo de contrato;		hc=1000;</p>
-  !costo de despido;		fc=1500;</p>
-  !costo de inventario;		ic=5;</p>
-  !producción acumulada;	bc=10;</p>
-  !subcontratos;			sc=120;</p>
-  !inventario inicial;		I0=400;</p>
-  !promesa de venta/</p>
-   producción acumulada;	B0=0;</p>
-  !trabajadores;			W0=38;</p>
-  ENDDATA</p></p>
-
+									<p>
+									<embed src="pdfFiles/MODEL.pdf" width="600" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+									<Object  datos = "/ data yourprezi.pdf"  tipo = "application / pdf"  width = "300"  altura = "200" > 
+<p class="lorem">Pdf pantalla completa.</p>
+ <a  href = "data/yourprezi.pdf"> yourprezi.pdf </a> 
+</object>
 									</p>
 								</article>
 						
